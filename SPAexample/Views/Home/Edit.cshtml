@@ -1,0 +1,67 @@
+﻿@model int
+
+<dl class="dl-horizontal" id="add-edit">
+
+    <dt>نام : </dt>
+    <dd>
+        <input type="text" class="form-control" id="txtName" placeholder="نام ..." />
+    </dd>
+
+    <dt>
+        <br />
+        نام خانوادگی :
+    </dt>
+    <dd>
+        <br />
+        <input type="text" class="form-control" id="txtFamily" placeholder="نام خانوادگی ..." />
+    </dd>
+
+    <dt>
+        <br />
+        سن  :
+    </dt>
+    <dd>
+        <br />
+        <input type="number" class="form-control" id="txtNumber" placeholder="سن ..." />
+    </dd>
+
+    <dt></dt>
+    <dd>
+        <br />
+        <input type="button" id="btnEdit" class=" btn btn-warning btn-block" value="ویرایش اطلاعات " />
+    </dd>
+
+
+</dl>
+<br />
+<a id="btnBack" class="btn btn-primary btn-sm">بازگشت </a>
+<script src="~/Content/js/backButton.js"></script>
+<script>
+
+$.getJSON("/Api/People/" +@Model , function (result) {
+
+    $('#txtName').val(result.Name);
+    $('#txtFamily').val(result.Family);
+    $('#txtNumber').val(result.Age);
+})
+
+$('#btnEdit').click(function () {
+
+    var person = {
+        ID:@Model ,
+    Name: $('#txtName').val(),
+        Family: $('#txtFamily').val(),
+            Age: $('#txtNumber').val(),
+        }
+
+        $.ajax({
+                url: '/api/People/' +@Model ,
+type: 'put',
+    data: person
+        }).done(function (result) {
+
+        $('#view').load('/Home/List');
+    });
+
+    });
+</script>

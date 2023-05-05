@@ -1,0 +1,60 @@
+﻿@using SPAexample.Utilitils
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title</title>
+    <link href="~/Content/Site.css" rel="stylesheet" type="text/css" />
+    <link href="~/Content/bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <script src="~/Scripts/modernizr-2.8.3.js"></script>
+</head>
+<body>
+    <div class="container">
+        @*navbar*@
+
+        <nav class="navbar navbar-default">
+            <div class="container-fluid">
+                <!-- Brand and toggle get grouped for better mobile display -->
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1" aria-expanded="false">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#" id="home">میدیرت مخاطبین</a>
+                </div>
+
+                <!-- Collect the nav links, forms, and other content for toggling -->
+                <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+                    <ul class="nav navbar-nav">
+                        <li><a href="#" id="info"><img src="~/Content/img/info.png" /></a></li>
+                        <li><a href="#"id="about"><img src="~/Content/img/user.png" /></a></li>
+                        <li><a href="#" id="Connect"><img src="~/Content/img/mail.png" /></a></li>
+                    </ul>
+                 
+                </div><!-- /.navbar-collapse -->
+            </div><!-- /.container-fluid -->
+        </nav>
+
+        @*end navbar*@
+
+        <div class="container body-content">
+            @RenderBody()
+            <hr />
+            <footer>
+                <p> @DateTime.Now.ToShamsi() پنل مدیریت مخاطبین</p>
+            </footer>
+        </div>
+    </div>
+
+
+
+    <script src="~/Content/js/jquery-v1.11.3.js"></script>
+    <script src="~/Content/js/jquery.unobtrusive-ajax.min.js"></script>
+    <script src="~/Content/js/bootstrap.min.js"></script>
+    <script src="~/Content/js/SweetAlert.js"></script>
+    @RenderSection("Scripts", false)
+</body>
+</html>

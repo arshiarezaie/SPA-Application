@@ -1,0 +1,84 @@
+﻿body {
+    padding-top: 50px;
+    padding-bottom: 20px;
+    background: url(img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+}
+
+.body-content {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+#list {
+    background-color: rgb(224, 248, 235);
+}
+
+tr a {
+    margin-right: 10px;
+}
+
+footer {
+    background-color: rgb(214, 240, 245);
+}
+
+body {
+    direction: rtl;
+}
+
+nav a {
+    margin-right: 20px;
+}
+
+a img {
+    height: 25px;
+    width: 25px;
+}
+
+
+#information {
+    background-color: rgb(224, 248, 235);
+    border-radius: 5px;
+    padding: 5px 30px 5px 10px;
+}
+
+#aboutme {
+    background-color: rgb(224, 248, 235);
+    border-radius: 5px;
+    padding: 5px 10px 5px 10px;
+}
+
+    #aboutme table tr td {
+        direction: ltr !important;
+    }
+
+
+#add-edit {
+    direction: rtl;
+    background-color: rgb(224, 248, 235);
+    border-radius: 5px;
+    padding: 5px 20px 5px 10px;
+}
+
+    #add-edit dt {
+        text-align: right;
+        clear: both;
+        float: right;
+        width: auto;
+    }
+
+    #add-edit dd {
+        margin-right: 0;
+        margin-left: 180px;
+        padding: 5px 70px 5px 10px;
+    }
+
+        #add-edit dt br,
+        #add-edit dd br {
+            display: none;
+        }
+
+#connect-header{
+    text-align:center;
+}

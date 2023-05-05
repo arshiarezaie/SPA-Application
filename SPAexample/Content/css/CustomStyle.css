@@ -1,0 +1,20 @@
+﻿.field-validation-valid {
+    display: none;
+}
+
+.filter input[type=text] {
+    margin:5px;
+    width: 95% !important;
+}
+.filter input[type=number] {
+    margin: 5px;
+    width: 95% !important;
+}
+
+.filter input[type=checkbox] {
+    margin:5px;
+}
+
+.filter ul{
+    padding:5px;
+}
